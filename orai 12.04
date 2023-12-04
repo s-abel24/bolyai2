@@ -1,0 +1,34 @@
+#szo="Szépen süt a nap"
+#szunet=[]
+#print(szo[0:5])
+#print(szo[7:9])
+#print(szo[11:11])
+#print(szo[13:])
+
+# szo = input("Kérem adjon meg egy szót:")
+# nagyszo=""
+# for betu in szo:
+#     nagy=ord(betu)
+#     if nagy >96 and nagy <123:
+#        nagy-=32
+#        betu=chr(nagy)
+#     nagyszo+=betu
+# hossz=len(nagyszo)
+# ford=""
+# for i in range(hossz-1,-1,-1):
+#    ford+=nagyszo[i]
+# print(ford)
+
+mondat= input("Írjon be egy mondatot: ")
+szunet=[]
+for i in range(len(mondat)):
+    if mondat[i]==" ":
+        szunet.append(i)
+szunet.append(len(mondat))
+elozo=0
+for i in szunet:
+    elso_betu=ord(mondat[elozo:i][0])
+    if elso_betu > 96 and elso_betu < 123:
+        elso_betu -=32
+    print(chr(elso_betu)+mondat[elozo+1:i])
+    elozo=i+1
