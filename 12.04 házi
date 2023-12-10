@@ -1,0 +1,9 @@
+nyilvanos = "SAS"
+
+eltolas=2
+
+for i in range(len(nyilvanos)):
+    if (ord(nyilvanos[i])+eltolas)>ord("Z"):
+        print(chr(ord(nyilvanos[i])-(ord("Z")-ord("A"))), end="")
+    else:
+        print(chr(ord(nyilvanos[i])+eltolas),end="")
