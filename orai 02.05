@@ -1,0 +1,43 @@
+# #def egy_szam(_szam:int):
+#
+#
+#
+#
+#     sorok=[["###", " # ", "###", "###", "# #", "###", "###", "###", "###", "###"],
+#     ["# #", " # ", "  #", "  #", "# #", "#  ", "#  ", "  #", "# #", "# #"],
+#     ["# #", " # ", "###", "###", "###", "###", "###", "  #", "###", "###"],
+#     ["# #", " # ", "#  ", "  #", "  #", "  #", "# #", "  #", "# #", "  #"],
+#     ["###", " # ", "###", "###", "  #", "###", "###", "  #", "###", " ##"]]
+#     for sor in sorok:
+#         print(sor[_szam])
+# #*************************************************************
+#
+# szam=input("Kérem....")
+# for egy in szam:
+#     egy_szam(int(egy))
+#     #print(egy)
+
+
+# #def uzenet(szoveg,szam):
+#     print(f"Írja be az {szam}).{szoveg}")
+#
+# uzenet("értéket:",1)
+# a = int(input())
+# uzenet("számot:",2)
+# b = int(input())
+# uzenet("adatot:",3)
+# c = int(input())
+# print("Ezt írta be: ",a,b,c)
+#
+# def nevek(vezetekn,keresztn):
+#     print("Üdvözlüm kedves",vezetekn,keresztn)
+#
+# nevek(vezetekn="Speizer",keresztn="Ábel")
+# nevek(keresztn="",vezetekn="")
+
+def kerulet(a,b,c):
+    k=a+b+c
+    return k
+    #return a+b+c
+
+haromszog_kerulet
