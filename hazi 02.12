@@ -1,0 +1,23 @@
+def kerulet(oldalak):
+   k=0
+   oldalsz = len(oldalak)
+
+   if oldalsz<3 or oldalsz>6:
+      print("Az oldalak számának 3 és 6 közé kell esnie!")
+   else:
+      for i in oldalak:
+         k += i
+
+      print(f"Kerület: {k}")
+
+      if oldalsz==3:
+         print("háromszög")
+      elif oldalsz==4:
+         print("négyszög")
+      else:
+         print("sokszög")
+
+
+###############################
+oldalsz = [6,3,2,1]
+kerulet(oldalsz)
