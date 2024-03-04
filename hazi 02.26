@@ -1,0 +1,41 @@
+forras = open("parduc.txt","r",encoding="utf-8")
+
+
+szavak = list()
+
+
+for egysor in forras:
+    sor = egysor.split(" ")
+
+
+    for x in sor:
+        if(len(sor)>1):
+            szavak.append(x)
+
+
+forras.close()
+
+db=0
+
+for szo in szavak:
+    for betu in szo:
+        if betu!="." and betu!=":" and betu!="!" and betu!="?" and betu!="," and betu!=";" and betu!="-":
+            db+=1
+
+
+print("1. feladat: Hány betűt tartamaz a vers?",db,"darabot")
+
+
+db=0
+
+for szo in szavak:
+    for x in szo:
+        x = x.lower()
+        if x=="a" or x=="á" or x=="e" or x=="é" or x=="i" or x=="í" or x=="o" or x=="ó" or x=="ö" or x=="ő" or x=="u" or x=="ú" or x=="ü" or x=="ű":
+            db+=1
+
+
+print("2. feladat: Magánhangzók száma: ",db)
+
+
+print("3. feladat: Szavak száma a versen:",len(szavak))
