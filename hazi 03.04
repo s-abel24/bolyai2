@@ -1,0 +1,51 @@
+def beker():
+    with open("adatok.csv","w",encoding="utf-8") as cel:
+        sor="valami"
+
+        while sor!="":
+            sor=input("Kérem adja meg a nevét:")
+            cel.write(sor)
+            if sor!="":
+                cel.write(";"+input("Kérem adja meg a szül.évet:")+"\n")
+
+
+#----------------------------------------------
+#----------------------------------------------
+print("Kérem adja meg az adatokat! Ha több adatot nem szeretne, üssön üres sort!")
+beker()
+
+
+with open("adatok.csv","r",encoding="utf-8") as forras:
+    adatok=[]
+    for sor in forras:
+        egy =  sor.strip("\n").split(";")
+        adatok.append(egy)
+
+print(adatok)
+
+#-------------------------------------------------------------------
+fiatal = 2024-int(adatok[0][1])
+ki=adatok[0][0]
+
+for szemely in adatok:
+    if fiatal>2024-int(szemely[1]):
+        fiatal=2024-int(szemely[1])
+        ki=szemely[0]
+
+
+print("1. feladat: A legfiatalabb:",ki,",kora:",fiatal)
+
+
+print("2. feladat: Felvettek életkora:")
+for szemely in adatok:
+    print(szemely[0], "--- >", 2024 - int(szemely[1]))
+
+
+maxnev=adatok[0][0]
+
+
+for szemely in adatok:
+    if len(maxnev)<len(szemely[0]):
+        maxnev=szemely[0]
+
+print("3. feladat: A leghosszabb nevű személy:",maxnev)
