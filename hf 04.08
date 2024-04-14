@@ -1,0 +1,53 @@
+import math
+
+
+def osszead(o1,o2):
+    return float(o1)+float(o2)
+
+def kivon(o1,o2):
+    return float(o1)-float(o2)
+
+def szoroz(o1,o2):
+    return float(o1)*float(o2)
+
+def oszt(o1,o2):
+    return float(o1)/float(o2)
+
+def hatvany(o1,k1):
+    return math.pow(float(o1),int(k1))
+
+def maradek(o1,o2):
+    return float(o1)%float(o2)
+
+
+szam = math.nan
+
+while(szam!="="):
+    if math.isnan(szam):
+        szam = input("számot kérek:")
+
+    if szam != "=":
+        if szam != math.nan:
+            operator = input("operátort kérek:")
+            if operator != "=":
+                szam2 = input("második számot kérek:")
+
+            if szam2 != math.nan:
+                if operator=="+":
+                    e=osszead(szam,szam2)
+                elif operator=="-":
+                    e=kivon(szam, szam2)
+                elif operator=="*":
+                    e=szoroz(szam, szam2)
+                elif operator=="/":
+                    e=kivon(szam, szam2)
+                elif operator=="%":
+                    e=maradek(szam, szam2)
+                elif operator=="^":
+                    e=hatvany(szam, szam2)
+                elif operator=="=":
+                    print(szam)
+                    break
+        szam = float(e)
+        print(szam)
+
