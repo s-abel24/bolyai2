@@ -1,0 +1,21 @@
+import random as r
+
+lista = ["kacsa", "liba", "tyúk", "csirke", "pipi", "kakas"]
+
+szo = r.choice(lista)
+
+print(" ".join("." * len(szo)))
+
+while True:
+    betu = input("Adjon meg egy betűt: ").lower()
+
+    if betu in szo:
+        print("Helyes!")
+        for i in range(len(szo)):
+            if szo[i] == betu:
+                print(betu, end=" ")
+            else:
+                print(".", end=" ")
+        print("\n")
+    else:
+        print("Rossz találat. Próbálja újra!")
