@@ -1,0 +1,43 @@
+# def ertekeles(pont):
+#     vissza=False
+#     if pont>=48:
+#         vissza=True
+#         return vissza
+#
+# nev="a"
+# while nev!=" ":
+#     nev = input("Add meg a viszgázó nevét:")
+#     pontszam = int(input("Add meg a pontszámát!"))
+#     valasz=ertekeles(pontszam)
+#     if valasz:
+#         print(nev,"vizsgája sikeres")
+#     else:
+#         (nev,"vizsgája sikertelen.")
+
+
+with open("tanc.csv","r",encoding="utf-8") as forras:
+    forras.readline()
+    tancok=[]
+    for egy_sor in forras:
+        sor=egy_sor.strip().split(";")
+        tancok.append(sor)
+#*****************************************************************************
+hossz=len(tancok)
+tanclista=[tancok[0][0]]
+for i in range(hossz):
+    if tancok[i][0] not in tanclista:
+        tanclista.append(tancok[i][0])
+
+print(tanclista)
+
+dbszamok=[]
+
+tanclista=tancok[0][0]
+for tanc in tanclista:
+    db=0    
+    for i in range(hossz):
+        if tancok[i][0]==tanc:
+            db=db+1
+    dbszamok.append(db)
+print(tanclista)
+print(dbszamok)
