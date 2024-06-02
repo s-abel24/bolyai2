@@ -1,0 +1,41 @@
+#Elso feladat
+szam1 = int(input("kérem az elsőt"))
+szam2 = int(input("kérem a másodikat"))
+
+if szam1 > szam2:
+    print(szam1,"a nagyobb")
+elif szam1 == szam2:
+    print("számok egyenlők")
+else:
+    print(szam2,"a nagyobb")
+
+#Második feladat
+def kodolas(szoveg,betu):
+    kimenet = ""
+    for s in range(0,len(szoveg)):
+        if szoveg[s]==betu:
+            kimenet += str(ord(szoveg[s]))
+        else:
+            kimenet += szoveg[s]
+    return kimenet
+
+print("Szöveg:",kodolas("Valami szöveget kell megadni","a"))
+
+#Harmadik feladat
+forras = open("autok.csv","r",encoding="UTF-8")
+
+indulas = list()
+cel = list()
+rendszam = list()
+telefonszam = list()
+ferohely = list()
+
+for sor in forras:
+    adatok = sor.split(";")
+
+    indulas.append(adatok[0])
+    cel.append(adatok[1])
+    rendszam.append(adatok[2])
+    telefonszam.append(adatok[3])
+    ferohely.append(adatok[4])
+print(adatok)
