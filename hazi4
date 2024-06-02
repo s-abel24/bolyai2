@@ -1,0 +1,36 @@
+#Elso feladat
+szam = int(input("Kérem a számot!"))
+
+if szam%2==0:
+    print("A(z)",szam,"páros")
+else:
+    print("Páratlan")
+
+#Második feladat
+def email(nev,osztaly):
+    nev = nev.lower()
+    nev = nev.replace(" ",".")
+
+    olista = osztaly.split(".")
+
+    return nev+"."+"tech"+str((2024-(int(olista[0])-8)))+olista[1].lower()+"@bolyaimovar.com"
+
+nev = "Buga Jakab"
+osztaly = "12.B"
+
+print("Az e-mail cím:",email(nev,osztaly))
+
+#Harmadik feladat
+forras = open("hegyekMo.txt","r",encoding="UTF-8")
+
+hegycsucs = list()
+hegyseg = list()
+magassag = list()
+
+for sor in forras:
+    adatok = sor.split(";")
+
+    hegycsucs.append(adatok[0])
+    hegyseg.append(adatok[1])
+    magassag.append(adatok[2])
+print(adatok)
